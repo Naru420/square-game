@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://lnhal2xdiqf0"]
+[gd_scene load_steps=3 format=3 uid="uid://lnhal2xdiqf0"]
 
 [ext_resource type="Script" path="res://turn_based_battel.gd" id="1_a3vmr"]
+[ext_resource type="PackedScene" uid="uid://xfswl4t82b85" path="res://player_charakter.tscn" id="2_8m5q8"]
 
 [node name="turn_based_battel" type="Node2D"]
 script = ExtResource("1_a3vmr")
 Enemy_Party = null
+
+[node name="player charakter" parent="." instance=ExtResource("2_8m5q8")]
+hp = null
+def = null
+mana = null
+stamina = null
+attacks = null

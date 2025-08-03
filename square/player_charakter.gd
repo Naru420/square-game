@@ -1,15 +1,5 @@
-class_name Charakter
-extends Node2D
+extends Charakter
 
-@export_category("Stats")
-@export var hp : int
-@export var def :int
-@export var mana : int
-@export var stamina : int
-@export var speed : int
-
-@export_category("attacks")
-@export var attacks : Array[String]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

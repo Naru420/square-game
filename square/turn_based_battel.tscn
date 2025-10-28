@@ -3,8 +3,16 @@
 [ext_resource type="Script" path="res://turn_based_battel.gd" id="1_a3vmr"]
 [ext_resource type="PackedScene" uid="uid://xfswl4t82b85" path="res://player_charakter.tscn" id="2_8m5q8"]
 
-[node name="turn_based_battel" type="Node2D" node_paths=PackedStringArray("Party")]
+[node name="turn_based_battel" type="Node2D" node_paths=PackedStringArray("Party", "Enemy_Party")]
 script = ExtResource("1_a3vmr")
-Party = [NodePath("player charakter")]
+Party = [NodePath("player charakter"), NodePath("player charakter2")]
+Enemy_Party = [NodePath("player charakter3")]
 
 [node name="player charakter" parent="." instance=ExtResource("2_8m5q8")]
+speed = 1
+
+[node name="player charakter2" parent="." instance=ExtResource("2_8m5q8")]
+speed = 2
+
+[node name="player charakter3" parent="." instance=ExtResource("2_8m5q8")]
+speed = 5

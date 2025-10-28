@@ -7,6 +7,7 @@ extends Node2D
 @export var mana : int
 @export var stamina : int
 @export var speed : int
+@export var lastTurn : int
 
 @export_category("attacks")
 @export var attacks : Array[String]
@@ -17,5 +18,23 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
+
+
+func getHp():
+	return hp
+	
+func getDef():
+	return def
+	
+func getSpeed():
+	return speed
+
+func getlastTurn():
+	return lastTurn
+	
+	
+	
+func setlastTurn(turn : int):
+	lastTurn = turn

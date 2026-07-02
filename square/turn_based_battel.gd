@@ -6,6 +6,7 @@ extends Node2D
 var all_participants
 var CurrentTurn : int
 var CurrentTurnParticipant : Array[Charakter] 
+var ChoicenPlayer : Charakter
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	all_participants = Party + Enemy_Party
@@ -14,10 +15,16 @@ func _ready() -> void:
 	CurrentTurn = 2
 	
 	getCurrentTurnParticipant()
-	#CreateTurnOrder(5)
-	pass # Replace with function body.
+	
+func move_choice_overlay(Party,ChoicenPlayer):
+	
+	pass
+	
 
-
+func instaniciateTurn():
+	for participant in CurrentTurnParticipant:
+		participant.Turn()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:
 #	pass
@@ -35,4 +42,4 @@ func getCurrentTurnParticipant():
 			print("true") 
 	print(CurrentTurnParticipant) 
 	return CurrentTurnParticipant
-	pass
+	
